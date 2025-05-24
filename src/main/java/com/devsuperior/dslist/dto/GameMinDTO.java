@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Game;
+import com.devsuperior.dslist.projections.GameMinProjection;
 
 /*
  * É um objeto simplificado que serve pra transportar dados de uma camada pra outra (geralmente do back pro front).
@@ -26,6 +27,16 @@ public class GameMinDTO {
 		this.year = entity.getYear();
 		this.imgUrl = entity.getImgUrl();
 		this.shortDescription = entity.getShortDescription();
+	}
+	
+	//construtor pela projection (para list/id/game)
+	public GameMinDTO(GameMinProjection proj) {
+		this.id = proj.getId();
+		this.title = proj.getTitle();
+		this.year = proj.getYear();
+		this.imgUrl = proj.getImgUrl();
+		this.shortDescription = proj.getShortDescription();
+		
 	}
 	
 	//No DTO só precisamos de getters
