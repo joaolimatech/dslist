@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 @Table(name = "tb_game")
 public class Game {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)//essa strategy IDENTITY ta falando pro JPA q o metodo de criacao de IDs eh autoincrement
 	private Long id;
 	private String title;
 	private String genre;
