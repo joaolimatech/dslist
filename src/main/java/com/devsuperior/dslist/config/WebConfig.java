@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig {
 
-	@Value("${cors.origins}")
+	@Value("${cors.origins}") //variavel cors.origins do application.properties para possibilitar um endereco de cvs com nosso backend
 	private String corsOrigins;
 	
 	@Bean
